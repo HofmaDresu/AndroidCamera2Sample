@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using AndroidCamera2Demo.Controls;
 
 namespace AndroidCamera2Demo
 {
@@ -14,6 +15,17 @@ namespace AndroidCamera2Demo
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+
+            surfaceTextureView = FindViewById<AutoFitTextureView>(Resource.Id.surface);
+            switchCameraButton = FindViewById<ImageButton>(Resource.Id.surface);
+            takePictureButton = FindViewById<Button>(Resource.Id.surface);
+            recordVideoButton = FindViewById<Button>(Resource.Id.surface);
         }
+
+        private AutoFitTextureView surfaceTextureView;
+        private ImageButton switchCameraButton;
+        private Button takePictureButton;
+        private Button recordVideoButton;
     }
 }

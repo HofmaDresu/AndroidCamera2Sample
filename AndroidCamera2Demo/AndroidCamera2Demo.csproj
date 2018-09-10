@@ -59,6 +59,11 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Callbacks\CameraCaptureCallback.cs" />
+    <Compile Include="Callbacks\CameraStateCallback.cs" />
+    <Compile Include="Callbacks\CaptureStateSessionCallback.cs" />
+    <Compile Include="Callbacks\ImageAvailableListener.cs" />
+    <Compile Include="CompareSizesByArea.cs" />
     <Compile Include="Controls\AutoFitTextureView.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
