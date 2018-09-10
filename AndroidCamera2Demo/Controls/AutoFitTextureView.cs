@@ -48,24 +48,22 @@ namespace AndroidCamera2Demo.Controls
             base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
             int width = MeasureSpec.GetSize(widthMeasureSpec);
             int height = MeasureSpec.GetSize(heightMeasureSpec);
+
             if (0 == ratioWidth || 0 == ratioHeight)
             {
                 SetMeasuredDimension(width, height);
             }
             else
             {
-                // The commented out section allows this method to alter the height of this view if that is the smaller change.
-                // In this sample we want to have a fixed height, so we're only allowing this method to change width
-                /*
+                // This code allows us to alter the height or width of the view to match our desired aspect ration         
                 if (width < (float)height * ratioWidth / ratioHeight)
                 {
                     SetMeasuredDimension(width, width * ratioHeight / ratioWidth);
                 }
                 else
                 {
-                */
                     SetMeasuredDimension(height * ratioWidth / ratioHeight, height);
-                //}
+                }
             }
         }
     }
