@@ -1605,11 +1605,14 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f02003b
 			public const int fab_background = 2130837563;
 			
-			// aapt resource value: 0x7f02003d
-			public const int notification_template_icon_bg = 2130837565;
+			// aapt resource value: 0x7f02003e
+			public const int notification_template_icon_bg = 2130837566;
 			
 			// aapt resource value: 0x7f02003c
 			public const int snackbar_background = 2130837564;
+			
+			// aapt resource value: 0x7f02003d
+			public const int twotone_switch_camera_black_48 = 2130837565;
 			
 			static Drawable()
 			{
@@ -1624,8 +1627,8 @@ namespace AndroidCamera2Demo
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0068
-			public const int action0 = 2131492968;
+			// aapt resource value: 0x7f0c006d
+			public const int action0 = 2131492973;
 			
 			// aapt resource value: 0x7f0c0057
 			public const int action_bar = 2131492951;
@@ -1651,8 +1654,8 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c0058
 			public const int action_context_bar = 2131492952;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int action_divider = 2131492972;
+			// aapt resource value: 0x7f0c0071
+			public const int action_divider = 2131492977;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1687,8 +1690,11 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c004d
 			public const int buttonPanel = 2131492941;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int cancel_action = 2131492969;
+			// aapt resource value: 0x7f0c0066
+			public const int button_section = 2131492966;
+			
+			// aapt resource value: 0x7f0c006e
+			public const int cancel_action = 2131492974;
 			
 			// aapt resource value: 0x7f0c002b
 			public const int center = 2131492907;
@@ -1702,8 +1708,8 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c004f
 			public const int checkbox = 2131492943;
 			
-			// aapt resource value: 0x7f0c006f
-			public const int chronometer = 2131492975;
+			// aapt resource value: 0x7f0c0074
+			public const int chronometer = 2131492980;
 			
 			// aapt resource value: 0x7f0c002e
 			public const int clip_horizontal = 2131492910;
@@ -1744,8 +1750,8 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c0015
 			public const int end = 2131492885;
 			
-			// aapt resource value: 0x7f0c0074
-			public const int end_padder = 2131492980;
+			// aapt resource value: 0x7f0c0079
+			public const int end_padder = 2131492985;
 			
 			// aapt resource value: 0x7f0c0024
 			public const int enterAlways = 2131492900;
@@ -1789,17 +1795,17 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c003f
 			public const int image = 2131492927;
 			
-			// aapt resource value: 0x7f0c0073
-			public const int info = 2131492979;
+			// aapt resource value: 0x7f0c0078
+			public const int info = 2131492984;
 			
 			// aapt resource value: 0x7f0c0033
 			public const int left = 2131492915;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int line1 = 2131492973;
+			// aapt resource value: 0x7f0c0072
+			public const int line1 = 2131492978;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int line3 = 2131492977;
+			// aapt resource value: 0x7f0c0076
+			public const int line3 = 2131492982;
 			
 			// aapt resource value: 0x7f0c000a
 			public const int listMode = 2131492874;
@@ -1807,8 +1813,8 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c0041
 			public const int list_item = 2131492929;
 			
-			// aapt resource value: 0x7f0c006b
-			public const int media_actions = 2131492971;
+			// aapt resource value: 0x7f0c0070
+			public const int media_actions = 2131492976;
 			
 			// aapt resource value: 0x7f0c0016
 			public const int middle = 2131492886;
@@ -1845,6 +1851,12 @@ namespace AndroidCamera2Demo
 			
 			// aapt resource value: 0x7f0c0051
 			public const int radio = 2131492945;
+			
+			// aapt resource value: 0x7f0c0068
+			public const int record_video_button = 2131492968;
+			
+			// aapt resource value: 0x7f0c006a
+			public const int reverse_camera_button = 2131492970;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int right = 2131492916;
@@ -1906,11 +1918,11 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c0012
 			public const int showTitle = 2131492882;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int snackbar_action = 2131492967;
+			// aapt resource value: 0x7f0c006c
+			public const int snackbar_action = 2131492972;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int snackbar_text = 2131492966;
+			// aapt resource value: 0x7f0c006b
+			public const int snackbar_text = 2131492971;
 			
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
@@ -1927,26 +1939,32 @@ namespace AndroidCamera2Demo
 			// aapt resource value: 0x7f0c0035
 			public const int start = 2131492917;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int status_bar_latest_event_content = 2131492970;
+			// aapt resource value: 0x7f0c006f
+			public const int status_bar_latest_event_content = 2131492975;
 			
 			// aapt resource value: 0x7f0c0062
 			public const int submit_area = 2131492962;
 			
+			// aapt resource value: 0x7f0c0069
+			public const int surface = 2131492969;
+			
 			// aapt resource value: 0x7f0c000c
 			public const int tabMode = 2131492876;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int text = 2131492978;
+			// aapt resource value: 0x7f0c0067
+			public const int take_picture_button = 2131492967;
 			
-			// aapt resource value: 0x7f0c0070
-			public const int text2 = 2131492976;
+			// aapt resource value: 0x7f0c0077
+			public const int text = 2131492983;
+			
+			// aapt resource value: 0x7f0c0075
+			public const int text2 = 2131492981;
 			
 			// aapt resource value: 0x7f0c004a
 			public const int textSpacerNoButtons = 2131492938;
 			
-			// aapt resource value: 0x7f0c006e
-			public const int time = 2131492974;
+			// aapt resource value: 0x7f0c0073
+			public const int time = 2131492979;
 			
 			// aapt resource value: 0x7f0c0043
 			public const int title = 2131492931;

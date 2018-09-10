@@ -4,4 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+  <LinearLayout
+      android:id="@+id/button_section"
+      android:layout_height="100dp"
+      android:layout_width="match_parent"
+      android:layout_alignParentBottom="true"
+      android:background="@android:color/white"
+      android:orientation="horizontal">
+    <Button
+      android:id="@+id/take_picture_button"
+      android:layout_height="80dp"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_gravity="center_vertical"
+      android:text="Take Picture"/>
+    <Button
+      android:id="@+id/record_video_button"
+      android:layout_height="80dp"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_gravity="center_vertical"
+      android:text="Record Video"/>
+  </LinearLayout>
+  <AndroidCamera2Demo.Controls.AutoFitTextureView
+      android:id="@+id/surface"
+      android:layout_height="match_parent"
+      android:layout_width="match_parent"
+      android:layout_centerHorizontal="true"
+      android:layout_above="@id/button_section" />
+  <ImageButton
+      android:id="@+id/reverse_camera_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:src="@drawable/twotone_switch_camera_black_48" />
 </RelativeLayout>
