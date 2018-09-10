@@ -66,6 +66,8 @@
     <Compile Include="CompareSizesByArea.cs" />
     <Compile Include="Controls\AutoFitTextureView.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MainActivity_PhotoCapture.cs" />
+    <Compile Include="MainActivity_VideoCapture.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
