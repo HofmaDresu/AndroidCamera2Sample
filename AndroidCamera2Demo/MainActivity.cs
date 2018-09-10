@@ -19,9 +19,9 @@ namespace AndroidCamera2Demo
 
 
             surfaceTextureView = FindViewById<AutoFitTextureView>(Resource.Id.surface);
-            switchCameraButton = FindViewById<ImageButton>(Resource.Id.surface);
-            takePictureButton = FindViewById<Button>(Resource.Id.surface);
-            recordVideoButton = FindViewById<Button>(Resource.Id.surface);
+            switchCameraButton = FindViewById<ImageButton>(Resource.Id.reverse_camera_button);
+            takePictureButton = FindViewById<Button>(Resource.Id.take_picture_button);
+            recordVideoButton = FindViewById<Button>(Resource.Id.record_video_button);
         }
 
         private AutoFitTextureView surfaceTextureView;
