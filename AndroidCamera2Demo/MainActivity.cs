@@ -277,15 +277,17 @@ namespace AndroidCamera2Demo
                 maxPreviewHeight, largest);
 
             // We fit the aspect ratio of TextureView to the size of preview we picked.
+            // The commented code handles landscape layouts. This app is portrait only, so this is not needed
+            /*
             var orientation = Application.Context.Resources.Configuration.Orientation;
             if (orientation == global::Android.Content.Res.Orientation.Landscape)
             {
                 surfaceTextureView.SetAspectRatio(previewSize.Width, previewSize.Height);
             }
             else
-            {
+            {*/
                 surfaceTextureView.SetAspectRatio(previewSize.Height, previewSize.Width);
-            }
+            /*}*/
 
             // Check if the flash is supported.
             var available = (bool?)characteristics.Get(CameraCharacteristics.FlashInfoAvailable);
