@@ -77,18 +77,18 @@ namespace AndroidCamera2Demo
         private ImageAvailableListener onImageAvailableListener;
         private SparseIntArray orientations = new SparseIntArray();
         private LensFacing currentLensFacing = LensFacing.Back;
-        CameraCharacteristics characteristics;
-        CameraDevice cameraDevice;
-        ImageReader imageReader;
-        int sensorOrientation;
-        Size previewSize;
-        HandlerThread backgroundThread;
-        Handler backgroundHandler;
-        bool flashSupported;
-        Surface previewSurface;
-        CameraCaptureSession captureSession;
-        CaptureRequest.Builder previewRequestBuilder;
-        CaptureRequest previewRequest;
+        private CameraCharacteristics characteristics;
+        private CameraDevice cameraDevice;
+        private ImageReader imageReader;
+        private int sensorOrientation;
+        private Size previewSize;
+        private HandlerThread backgroundThread;
+        private Handler backgroundHandler;
+        private bool flashSupported;
+        private Surface previewSurface;
+        private CameraCaptureSession captureSession;
+        private CaptureRequest.Builder previewRequestBuilder;
+        private CaptureRequest previewRequest;
 
         protected override void OnResume()
         {
@@ -302,11 +302,10 @@ namespace AndroidCamera2Demo
             return;
         }
 
-        // Configures the necessary {@link android.graphics.Matrix}
-        // transformation to `mTextureView`.
+        // Configures the necessary matrix
+        // transformation to `surfaceTextureView`.
         // This method should be called after the camera preview size is determined in
-        // setUpCameraOutputs and also the size of `mTextureView` is fixed.
-
+        // setUpCameraOutputs and also the size of `surfaceTextureView` is fixed.
         public void ConfigureTransform(int viewWidth, int viewHeight)
         {
             if (null == surfaceTextureView || null == previewSize)
