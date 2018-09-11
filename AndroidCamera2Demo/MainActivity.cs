@@ -1,4 +1,4 @@
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
@@ -422,6 +422,15 @@ namespace AndroidCamera2Demo
             {
                 requestBuilder.Set(CaptureRequest.ControlAeMode, (int)ControlAEMode.OnAutoFlash);
             }
+        }
+
+        int GetOrientation(int rotation)
+        {
+            // Sensor orientation is 90 for most devices, or 270 for some devices (eg. Nexus 5X)
+            // We have to take that into account and rotate image properly.
+            // For devices with orientation of 90, we simply return our mapping from orientations.
+            // For devices with orientation of 270, we need to rotate 180 degrees.
+            return (orientations.Get(rotation) + sensorOrientation + 270) % 360;
         }
     }
 }
