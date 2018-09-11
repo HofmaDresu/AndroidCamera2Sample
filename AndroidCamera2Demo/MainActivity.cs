@@ -134,7 +134,34 @@ namespace AndroidCamera2Demo
             recordVideoButton.Click -= RecordVideoButton_Click;
             surfaceTextureView.SurfaceTextureAvailable -= SurfaceTextureView_SurfaceTextureAvailable;
 
+            CloseCamera();
             StopBackgroundThread();
+        }
+
+        void CloseCamera()
+        {
+            try
+            {
+                if (null != captureSession)
+                {
+                    captureSession.Close();
+                    captureSession = null;
+                }
+                if (null != cameraDevice)
+                {
+                    cameraDevice.Close();
+                    cameraDevice = null;
+                }
+                if (null != imageReader)
+                {
+                    imageReader.Close();
+                    imageReader = null;
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine($"{e.Message} {e.StackTrace}");
+            }
         }
 
         private void StopBackgroundThread()
