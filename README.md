@@ -1,4 +1,4 @@
-# AndroidCamera2Sample
+# Xamarin Android Camera2 API Sample
 
 This is a sample Xamarin application using the Android Camera2 API to create a single view that can take pictures and record videos.
 
