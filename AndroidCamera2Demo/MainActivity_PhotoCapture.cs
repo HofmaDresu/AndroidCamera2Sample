@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.IO;
 using System.Linq;
 using Android.Content;
@@ -170,6 +171,8 @@ namespace AndroidCamera2Demo
         private void HandleImageCaptured(ImageReader imageReader)
         {
             Java.IO.FileOutputStream fos = null;
+            Java.IO.File imageFile = null;
+            var photoSaved = false;
             try
             {
                 var image = imageReader.AcquireLatestImage();
@@ -179,26 +182,8 @@ namespace AndroidCamera2Demo
                 var bitmap = BitmapFactory.DecodeByteArray(data, 0, data.Length);
                 var widthGreaterThanHeight = bitmap.Width > bitmap.Height;
                 image.Close();
-                /*
-                if (CurrentCaptureDevice == MediaCaptureDevice.RearCamera)
-                {
-                    var isSamsung = Build.Manufacturer.IndexOf("samsung", StringComparison.CurrentCultureIgnoreCase) >= 0;
-                    if (isSamsung || widthGreaterThanHeight)
-                    {
-                        bitmap = await bitmap.RotateBitmap(90);
-                    }
-                }
-                else
-                {
-                    bitmap = await bitmap.FlipHorizontal();
-                    if (widthGreaterThanHeight)
-                    {
-                        bitmap = await bitmap.RotateBitmap(90);
-                    }
-                }
-                */
 
-                string imageFileName = "AndroidCamera2DemoImage";
+                string imageFileName = Guid.NewGuid().ToString();
                 var storageDir = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryPictures);
 
                 var storageFilePath = storageDir + Java.IO.File.Separator + "AndroidCamera2Demo" + Java.IO.File.Separator + "Photos";
@@ -208,7 +193,11 @@ namespace AndroidCamera2Demo
                     folder.Mkdirs();
                 }
 
-                var imageFile = new Java.IO.File(storageFilePath + Java.IO.File.Separator + imageFileName + ".jpg");
+                imageFile = new Java.IO.File(storageFilePath + Java.IO.File.Separator + imageFileName + ".jpg");
+                if (imageFile.Exists())
+                {
+                    imageFile.Delete();
+                }
                 if (imageFile.CreateNewFile())
                 {
                     fos = new Java.IO.FileOutputStream(imageFile);
@@ -226,8 +215,7 @@ namespace AndroidCamera2Demo
                             fos.Write(data);
                         }
                         stream.Close();
-
-                        // TODO: preview picture
+                        photoSaved = true;
                     }
                 }
             }
@@ -239,7 +227,16 @@ namespace AndroidCamera2Demo
             {
                 if (fos != null) fos.Close();
                 RunOnUiThread(UnlockFocus);
-            }           
+            }
+
+            // Request that Android display our image if we successfully saved it
+            if (imageFile != null && photoSaved)
+            {
+                var intent = new Intent(Intent.ActionView);
+                var imageUri = Android.Net.Uri.Parse("file://" + imageFile.AbsolutePath);
+                intent.SetDataAndType(imageUri, "image/*");
+                StartActivity(intent);
+            }
         }
 
         void UnlockFocus()
