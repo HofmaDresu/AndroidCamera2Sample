@@ -154,7 +154,9 @@ namespace AndroidCamera2Demo
                 captureSession.StopRepeating();
                 captureSession.AbortCaptures();
                 captureSession.Capture(stillCaptureBuilder.Build(), cameraCaptureCallback, null);
-                var am = (AudioManager)GetSystemService(Context.AudioService);
+
+                // Play shutter sound to alert user that image was captured
+                var am = (AudioManager)GetSystemService(AudioService);
                 if (am != null && am.RingerMode == RingerMode.Normal)
                 {
                     var cameraSound = new MediaActionSound();
