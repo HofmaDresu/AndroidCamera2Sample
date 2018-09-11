@@ -1,4 +1,4 @@
-﻿using Android.App;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
@@ -123,7 +123,7 @@ namespace AndroidCamera2Demo
 
         private void SwitchCameraButton_Click(object sender, EventArgs e)
         {
-            // TODO
+            SetLensFacing(currentLensFacing == LensFacing.Back ? LensFacing.Front : LensFacing.Back);
         }
 
         protected override void OnPause()
