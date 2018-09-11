@@ -231,14 +231,14 @@ namespace AndroidCamera2Demo
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // In a real application we would handle this gracefully, likely alerting the user to the error
             }
             finally
             {
                 if (fos != null) fos.Close();
-                UnlockFocus();
+                RunOnUiThread(UnlockFocus);
             }           
         }
 
