@@ -416,7 +416,7 @@ namespace AndroidCamera2Demo
         private void OnDisconnected(CameraDevice cameraDevice)
         {
             // In a real application we may need to handle the user disconnecting external devices.
-            // Here we're only worring about built-in cameras
+            // Here we're only worrying about built-in cameras
         }
 
         private void OnError(CameraDevice cameraDevice, CameraError cameraError)
